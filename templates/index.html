@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Phone Price</title>
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Mobile Price Range Prediction</h2>
+            <h2>Specify your desired specs and click Predict</h2>
+            <h3>RAM size (MB)</h3>
+            <input id="first" name="RAM" type="number ">
+            <h3>Battery power (mAh)</h3><input id="second" name="batteryPower" required="required">
+            <h3>Screen height (pixels)</h3><input id="third" name="pixelHeight" required="required">
+            <h3>Screen width (pixels)</h3><input id="fourth" name="pixelWidth" required="required">
+           
+            <h3>Weight (grams)</h3><input id="fifth" name="mobileWeight" required="required">
+            <h3>Internal memory (GB)</h3><input id="sixth" name="internalMemory" required="required">
+            <h3>CPU cores (1 - 8)</h3><input id="seventh" name="numOfCores" required="required">
+            <br><br>
+            <button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h2>{{ prediction_text }}<h2>
+    </div>
+
+
+
+
+    <style>
+    
+    
+    h1,h2,h3{
+    
+    
+    margin-top:14px;
+    font-family: arial;
+    
+    }
+        body {
+            background-color: mintcream;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: arial;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        
+        
+        
+        
+       
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: lightgreen;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+            #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+            #sixth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+            #seventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+    </style>
+</body>
+
+</html>
